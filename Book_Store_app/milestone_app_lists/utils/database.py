@@ -1,8 +1,13 @@
 # !/milestone_app_lists/utils/database.py
-
+from typing import List, Dict
 """[Concerned with storing and retrieving books from a list.]"""
 
-books = []  # global variable
+books: List[Dict] = []  # global variable
+"""
+book = {"name": name,
+        "author": author,
+        "read": False # or True: boolean}
+"""
 
 
 def create_book_table():
@@ -27,7 +32,7 @@ def get_all_books():
     """[get all the books name]
 
     Returns:
-        [list]: [all books(dictionaty structure) save on the books list]
+        [list]: [all books(dictionary structure) save on the books list]
     """
     return books
 

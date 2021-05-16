@@ -15,6 +15,7 @@ Your choice: """
 
 def menu():
     """[Menu function to interact with user]"""
+
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         if user_input == 'a':
