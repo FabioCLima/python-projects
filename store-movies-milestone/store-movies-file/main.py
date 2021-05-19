@@ -16,22 +16,7 @@ Enter:
 Choose a option:  """
 
 
-def main():
-    database.create_movies_table()
-    option = input(MENU_PROMPT)
-    while option != 'q':
-        if option == 'a':
-            prompt_add_movie()
-        elif option == 'l':
-            list_movies()
-        elif option == 'f':
-            prompt_find_movie()
-        else:
-            print("Unknown command. Please try again.")
-        option = input(MENU_PROMPT)
-
-
-def prompt_add_movie():
+def add_movie():
     title = input('Enter the movie title: ')
     director = input('Enter the movie director: ')
     year = input('Enter the movie release year: ')
@@ -46,11 +31,27 @@ def list_movies():
         print("*********************")
 
 
-def prompt_find_movie():
+def find_movie():
     movie_name = input('Type the title of the movie you want to look.  ')
     movies = database.find_movie(movie_name)
-    for movie in movies:
-        print(f"<<{movie['title']}>> by {movie['director']} year:{movie['year']}")
+    print(movies)
+
+
+user_options = {"a": add_movie,
+                "l": list_movies,
+                "f": find_movie}
+
+
+def main():
+    database.create_movies_file()
+    option = input(MENU_PROMPT)
+    while option != 'q':
+        if option in user_options:
+            option_function = user_options[option]
+            option_function()
+        else:
+            print("Unknown command. Please try again.")
+        option = input(MENU_PROMPT)
 
 
 main()
