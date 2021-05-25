@@ -15,6 +15,7 @@ Enter:
 
 Choose a option:  """
 
+
 def add_movie():
     title = input('Enter the movie title: ')
     director = input('Enter the movie director: ')

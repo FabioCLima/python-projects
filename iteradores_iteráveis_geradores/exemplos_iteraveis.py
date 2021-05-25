@@ -1,14 +1,18 @@
 import sys
-import time   
+import time
+lista = list(range(10000))
+print(sys.getsizeof(lista))
 
-def gera():  
+
+def gera():
     r = []
-    for n in range(100): 
+    for n in range(100):
         yield n
-        time.sleep(0.1)  
+        time.sleep(0.1)
+    return r
 
-g = gera() 
 
-for v in g:  
-    print(v) #! laze evaluation
-    
+l1 = [x for x in range(10000)]
+print(sys.getsizeof(l1))
+l2 = (x for x in range(10000))
+print(sys.getsizeof(l2))
