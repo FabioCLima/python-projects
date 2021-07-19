@@ -1,16 +1,43 @@
 {
-    "ai.azureml.defaultWorkspaceId": "/subscriptions/3f4c62b2-ec5f-4d6f-b65e-e7ccc45bb3d3/resourceGroups/Machine_Learning_Training/providers/Microsoft.MachineLearningServices/workspaces/MachineLearning",
-    "python.pythonPath": "/home/fabio/projects/venv/bin/python3",
-    "code-runner.executorMap": {
-        "python" : "./venv/bin/python -u"
-    },
-    "azureML.defaultWorkspaceId": "/subscriptions/3f4c62b2-ec5f-4d6f-b65e-e7ccc45bb3d3/resourceGroups/Machine_Learning_Training/providers/Microsoft.MachineLearningServices/workspaces/MachineLearning",
-    "cSpell.ignoreWords": [
-        "blenda",
-        "fernanda"
-    ],
-    "cSpell.words": [
-        "carvalho",
-        "succesfully"
-    ]
+  "ai.azureml.defaultWorkspaceId": "/subscriptions/3f4c62b2-ec5f-4d6f-b65e-e7ccc45bb3d3/resourceGroups/Machine_Learning_Training/providers/Microsoft.MachineLearningServices/workspaces/MachineLearning",
+  "python.pythonPath": "/home/fabio/projects/venv/bin/python3",
+  "code-runner.executorMap": {
+    "python": "./venv/bin/python -u"
+  },
+  "azureML.defaultWorkspaceId": "/subscriptions/3f4c62b2-ec5f-4d6f-b65e-e7ccc45bb3d3/resourceGroups/Machine_Learning_Training/providers/Microsoft.MachineLearningServices/workspaces/MachineLearning",
+  "cSpell.ignoreWords": [
+    "apartir",
+    "atributos",
+    "blenda",
+    "calcula",
+    "coordenadas",
+    "defini",
+    "definição",
+    "dentro",
+    "dois",
+    "duas",
+    "est",
+    "estar",
+    "está",
+    "fernanda",
+    "herda",
+    "m",
+    "modela",
+    "myturtle",
+    "método",
+    "ngulo",
+    "o",
+    "penup",
+    "ponto",
+    "pontos",
+    "rectangule",
+    "refuta",
+    "ret",
+    "retangulo",
+    "retorna",
+    "retângulo",
+    "todo",
+    "verifica"
+  ],
+  "cSpell.words": ["carvalho", "succesfully"]
 }
