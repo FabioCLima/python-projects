@@ -1,4 +1,4 @@
-from addition import Addition 
+from addition import Addition
 
 # You don't need to change the import statement
 # now you can use Addition.add() function from the addition module like this:
