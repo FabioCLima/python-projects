@@ -6,7 +6,6 @@ from .database_connection import DatabaseConnection
 """Concerned with storing and retrieving books from a database"""
 
 
-
 def create_book_table() -> None:
     with DatabaseConnection('data.db') as connection:
         cursor = connection.cursor()
@@ -25,7 +24,8 @@ def get_all_books() -> List:
     with DatabaseConnection('data.db') as connection:
         cursor = connection.cursor()
         cursor.execute('SELECT * FROM books')
-        books = [{'name': row[0], 'author': row[1], 'read': row[2]} for row in cursor.fetchall()]
+        books = [{'name': row[0], 'author': row[1], 'read': row[2]} for row
+        in cursor.fetchall()]
 
     return books
 

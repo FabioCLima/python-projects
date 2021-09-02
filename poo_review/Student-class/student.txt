@@ -1,0 +1,26 @@
+Write a class student which has the following:
+    Properties
+        name
+        grades: list
+
+    Methods:
+        average_grade: calcule the average grade for each Student
+********************************************************************
+Blueprint for this dictionary
+my_student = {
+    'name'    : 'Fabio Lima',
+    'grades'  : [70, 88, 90, 99], 
+    'average' :  None # something here like a function to calculate the average
+}
+
+def average_grade(student):
+    return sum(student['grades']) / len(student['grades'])
+
+*******************************************************************************
+Extension of Student class by create a new class that inheritance 
+the properties and methods from Student's class (parent)
+
+Student --> parent class
+WorkingStudent --> child of Student class and has one property as 
+extension from parent class:
+    salary: property

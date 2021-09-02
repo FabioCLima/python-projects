@@ -1,0 +1,15 @@
+Blueprint for the class: 
+    movie = {
+        'name':'The Matrix',
+        'director': 'Wachowski'
+            }
+
+my_movie = Movie('The Matrix', 'Wachowski')
+
+The class Movie should have:
+    Properties:
+        name,
+        director
+
+    Method:
+        print_info: format and prints out the movie's info

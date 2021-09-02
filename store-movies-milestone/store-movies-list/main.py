@@ -27,7 +27,8 @@ def add_movie():
 def list_movies():
     movies = database.get_all_movies()
     for movie in movies:
-        print(f"\nTitle:{movie['title']}, \nDirector:{movie['director']}, \nRelease year: {movie['year']}")
+        print(f"\nTitle:{movie['title']}, \nDirector:{movie['director']},
+              \nRelease year: {movie['year']}")
         print("*********************")
 
 
@@ -35,7 +36,8 @@ def find_movie():
     movie_name = input('Type the title of the movie you want to look.  ')
     movies = database.find_movie(movie_name)
     for movie in movies:
-        print(f"<<{movie['title']}>> by {movie['director']} year:{movie['year']}")
+        print(f"<<{movie['title']}>> by {movie['director']} \
+            year:{movie['year']}")
 
 
 user_options = {"a": add_movie,

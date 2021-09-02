@@ -1,6 +1,5 @@
-
 import sqlite3
-from utils import database
+from utils import database2
 
 USER_CHOICE = """
 Enter:
@@ -20,7 +19,7 @@ def prompt_add_book():
         name = input("Enter the new book name:\n")
         author = input("Enter the new book author's name:\n")
 
-        database.add_book(name, author)
+        database2.add_book(name, author)
     except sqlite3.IntegrityError:
         print('The book you are trying to create already exist on database.')
         print('Try another one.')
@@ -29,9 +28,9 @@ def prompt_add_book():
 def list_books():
     """[list all the books available in the database]
     """
-    books = database.get_all_books()
+    books = database2.get_all_books()
     for book in books:
-        read = 'YES' if book['read']== 1 else 'NO'
+        read = 'YES' if book['read'] == 1 else 'NO'
         print(f"{book['name']} by {book['author']},read:{read}")
 
 
@@ -39,14 +38,14 @@ def prompt_read_book():
     """[save the name of the book the user finished reading.]
     """
     name = input('Enter the name of the book you just finished reading: \n')
-    database.mark_book_as_read(name)
+    database2.mark_book_as_read(name)
 
 
 def prompt_delete_book():
     """[Asks to the user which book he/she wants to delete]
     """
     name = input("Enter the book's name you wish to delete: \n")
-    database.delete_book(name)
+    database2.delete_book(name)
 
 
 menu_options = {
@@ -59,7 +58,7 @@ menu_options = {
 
 def menu():
     """[Menu function to interact with user]"""
-    database.create_book_table()
+    database2.create_book_table()
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         if user_input in menu_options:
